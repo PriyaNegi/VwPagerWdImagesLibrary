@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:background="@color/actionbar_background"
+                tools:context=".VwPagerActivity">
+
+    <TextView
+        android:id="@+id/tv_currentPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:id="@+id/imagesPager"/>
+
+
+</RelativeLayout>
