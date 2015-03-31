@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.priya.vwpagerwdimageslib.R;
+import com.example.priya.vwpagerwdimageslib.TouchImageView;
 
 import java.util.ArrayList;
 
@@ -34,8 +36,12 @@ public class VwPagerAdapter extends PagerAdapter{
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        View view = mInflater.inflate(R.layout.network_image_view, container, false);
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+      /*  View view = mInflater.inflate(R.layout.network_image_view, container, false);
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageView);*/
+        TouchImageView imageView = new TouchImageView(container.getContext());
+
+
+
 
         if (urls.size() == 0) {
             Glide.with(mContext)
@@ -57,8 +63,9 @@ public class VwPagerAdapter extends PagerAdapter{
                     .into(imageView);
 
         }
-        container.addView(view);
-        return view;
+       // container.addView(view);
+        container.addView(imageView, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        return imageView;
     }
 
     @Override

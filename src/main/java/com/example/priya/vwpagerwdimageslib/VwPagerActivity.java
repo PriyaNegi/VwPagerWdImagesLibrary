@@ -120,7 +120,7 @@ public class VwPagerActivity extends ActionBarActivity implements View.OnClickLi
 if(v.getId()==R.id.iv_displayGridList) {
     Intent intent = new Intent(VwPagerActivity.this, GridVwActivity.class);
 
-    VwPagerActivity.this.finish();
+
     startActivity(intent);
     overridePendingTransition(R.anim.mapview_slide_up, 0);
 }

@@ -7,6 +7,5 @@
     android:background="@color/strokeColor"
     android:layout_width="match_parent"
     android:adjustViewBounds="true"
-    android:scaleType="matrix"
     android:layout_height="wrap_content">
 </ImageView>
